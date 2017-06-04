@@ -14,7 +14,7 @@ public class UsernameServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("username", new GetFromDao().GetDao()); //new UserDao().getDefaultUsername());
+        req.setAttribute("username", new GetFromDao().getDao()); //new UserDao().getDefaultUsername());
         getServletContext()
                 .getRequestDispatcher("/WEB-INF/jsp/username.jsp").forward(req, resp);
     }

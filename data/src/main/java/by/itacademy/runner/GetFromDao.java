@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Getter
 public class GetFromDao {
-    public String GetDao() {
+    public String getDao() {
         UserDao userDao = new UserDao();
         String nameDao;
         String genderDao;
