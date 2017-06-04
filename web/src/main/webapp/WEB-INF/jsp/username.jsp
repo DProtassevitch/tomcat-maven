@@ -5,7 +5,7 @@
 </head>
 <body>
     <p>
-        <span>Default username: </span><span>${requestScope.username.getName}</span>
+        <span>Default username: </span><span>${requestScope.username}</span>
     </p>
 </body>
 </html>

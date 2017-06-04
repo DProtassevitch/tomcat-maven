@@ -1,12 +1,13 @@
 package by.itacademy.dao;
 
 import by.itacademy.entity.Users;
+import lombok.Getter;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-
+@Getter
 public class UserDao {
     private static final SessionFactory SESSION_FACTORY
             = new Configuration().configure().buildSessionFactory();
@@ -14,7 +15,7 @@ public class UserDao {
     public Users getDefaultUsername() {
         try (Session session = SESSION_FACTORY.openSession()) {
             Transaction transaction = session.beginTransaction();
-            Users user = session.get(Users.class, 2L);
+            Users user = session.get(Users.class, 1L);
             transaction.commit();
             return user;
 
