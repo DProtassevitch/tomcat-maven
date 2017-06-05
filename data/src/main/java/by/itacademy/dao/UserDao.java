@@ -7,7 +7,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-@Getter
+
 public class UserDao {
     private static final SessionFactory SESSION_FACTORY
             = new Configuration().configure().buildSessionFactory();
