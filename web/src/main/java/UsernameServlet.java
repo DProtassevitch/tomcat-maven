@@ -1,5 +1,5 @@
-import by.itacademy.dao.UserDao;
 import by.itacademy.runner.GetFromDao;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,7 +14,7 @@ public class UsernameServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("username", new GetFromDao().getDao()); //new UserDao().getDefaultUsername());
+        req.setAttribute("username", new GetFromDao().getDao());
         getServletContext()
                 .getRequestDispatcher("/WEB-INF/jsp/username.jsp").forward(req, resp);
     }
