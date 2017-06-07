@@ -19,7 +19,7 @@ public class SetUsers {
             Transaction transaction = session.beginTransaction();
             Users user = new Users();
             user.setName("Hulk");
-            user.setGender(Gender.Male);
+            user.setGender(Gender.MALE);
             user.setCreationDate(LocalDateTime.now());
 
             session.saveOrUpdate(user);
